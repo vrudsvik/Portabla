@@ -1,0 +1,76 @@
+#hej {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+    }
+#content {
+text-align: center;
+}
+.header {
+    padding: 40px;
+    text-align: center;
+    background-color:rgb(3, 3, 37);
+    color: rgb(138, 138, 138);
+    font-size: 30px;
+  }
+  .sb {
+width: 50%;
+float: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2%;
+margin-bottom: 2%;
+  }
+body {
+    background-color: rgb(179, 179, 179);
+  }
+.card{
+  background-color: rgb(3, 3, 37);
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 1%;
+border: solid rgb(255, 255, 255);
+border-width: 2px;
+}
+ul {
+  list-style-type: none;
+}
+.sideList{
+  text-align: left;
+  margin: 2%;
+  color:rgb(3, 3, 37);
+  font-size: 140%;
+}
+h5 {
+  color: rgb(255, 255, 255);
+}
+#knapp {
+  background-color: rgb(3, 3, 37);
+  color: white;
+}
+#listOfC {
+  background-color: rgb(3, 3, 37);
+  color: white;
+}
+#besokSidan {
+  background-color: rgb(255, 255, 255);
+  color: rgb(3, 3, 37);
+}
+#knapp2 {
+  background-color:rgb(255, 255, 255);
+  color:rgb(3, 3, 37);
+  width: 100%;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgb(3, 3, 37);
+  color: white;
+  text-align: center;
+}
+#spinner {
+  margin-top: 3%;
+  margin-left: 50%;
+}

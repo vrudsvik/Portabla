@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sv">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Find Uni</title>
+  </head>
+
+  <body>
+    <div class="header">
+    <h1 id="hej">Find your next University!</h1>
+    <p>Type in a contrey and find all the existing Univeristys in that contrey!!</p>
+    </div>
+    <div class="sb">
+      <main>
+        <form id="find-uni">
+        <label for="search" class="sr-only">Search Uni</label>
+            <div class="input-group">
+              <input type="search" id="search" autocomplete="on" placeholder="Type in the country you want to study in!" class="form-control">
+                <button type="submit" id="knapp" class="btn btn-primary">Search</button>
+            </div>
+            <div id="spinner" class="spinner-border text-secondary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+    </div>
+      </form>
+        <div id="content" class="align-self-sm-center">
+
+        </div>	
+      </main>
+    <div class="footer">
+        <h5>Find your Univeristy by Viktor Rudsvik</h5>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="test.js"></script>
+
+  </body>
+</html>
