@@ -5,7 +5,7 @@
  */
 
     // när sidan laddas in
-window.addEventListener('load', init);
+window.addEventListener('load', init); 
 
 function init() {
   document.querySelector('#spinner').classList.add('d-none');
@@ -16,7 +16,7 @@ function init() {
  // Sökfunktionen
 function search(e) {
   e.preventDefault();
-  document.querySelector('#content').innerHTML = null;
+  document.querySelector('#content').innerHTML = null;  // tömmer diven med sökinnehållet eller felmedelandet när en nysökning genomförsts. 
   hittaUni(document.querySelector('#search').value, document.querySelector('#content'));
   document.querySelector('#spinner').classList.remove('d-none');
 
@@ -25,7 +25,6 @@ function search(e) {
 
 
 function hittaUni(query) {
-    // TODO: Rewrite to match the specification
     window.fetch('http://universities.hipolabs.com/search?country=' + encodeURIComponent(query))
      .then(function(response){
          console.log(response);
@@ -35,51 +34,36 @@ function hittaUni(query) {
          let main = document.querySelector('#content');
           
         var i = 0;
-            //lsit knappen
-            var listOfC = document.createElement('button');
-            listOfC.textContent = 'List of all existing conteries!'
-            listOfC.className = 'btn btn-primary';
-            listOfC.setAttribute('id', 'listOfC');
-            main.appendChild(listOfC);
-
-            //listan med alla existerande Universiete
 
             //Skapar korten för varje Univerisitet
-        for(countryData of data) {
-        document.querySelector('#spinner').classList.add('d-none');
+        for(uniData of data) { //skapar for lopen som kör genom all data i API:et. 
+        document.querySelector('#spinner').classList.add('d-none'); // tar bort spinnern
 
-        let card = document.createElement('div');
+        let card = document.createElement('div'); //skapar kortet
         card.setAttribute('id', 'text1');
         card.className = 'card';
-        card.style.maxWidth='60rem';
+        card.style.maxWidth='90%';
         main.appendChild(card); 
 
-        let cardBody = document.createElement('div');
+        let cardBody = document.createElement('div'); //skapar bodyn i kortet
         cardBody.className = 'card-body';
         card.appendChild(cardBody);
 
-        let namn = document.createElement('h5');
+        let namn = document.createElement('h5'); //skapar rubriken
         namn.classList.add('card-title');
-        namn.textContent = countryData.name;
+        namn.textContent = uniData.name;
         cardBody.appendChild(namn);
 
-        let link = document.createElement('a');
+        let link = document.createElement('a'); //skapar knappen med länken till respektive Univeristet. 
         link.className = 'btn btn-primary';
         link.textContent = 'Visit their website!';
-        link.setAttribute('href', countryData.web_pages);
+        link.setAttribute('href', uniData.web_pages);
         link.setAttribute('id', 'knapp2');
         cardBody.appendChild(link); 
 
             //adderar i varje gång ett kort skapas
         i++;
-    
-
         }
-
-
-
-
-
             //Ifall inget Uni hittades från sökningen
         if (i<1){
             document.querySelector('#spinner').classList.add('d-none');

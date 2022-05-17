@@ -24,7 +24,7 @@ margin-bottom: 2%;
 body {
     background-color: rgb(179, 179, 179);
   }
-.card{
+#text1 {
   background-color: rgb(3, 3, 37);
 margin-left: auto;
 margin-right: auto;
@@ -59,7 +59,8 @@ h5 {
 #knapp2 {
   background-color:rgb(255, 255, 255);
   color:rgb(3, 3, 37);
-  width: 100%;
+  max-width: 100%;
+
 }
 .footer {
   position: fixed;
@@ -73,4 +74,13 @@ h5 {
 #spinner {
   margin-top: 3%;
   margin-left: 50%;
+}
+h5 {
+  font-size: 2rem;
+  max-width: 100%;
+
+}
+#find-uni {
+  max-width: 90%;
+  margin: auto;
 }
